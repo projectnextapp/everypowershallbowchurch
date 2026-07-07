@@ -1,0 +1,212 @@
+/* ==========================================================================
+   Beautiful Production-Ready Footer Layout Configs
+   ========================================================================== */
+
+.site-footer {
+  background: var(--color-red-dark, #3a0506); /* Solid burgundy base framework anchor */
+  position: relative;
+  color: rgba(255, 255, 255, 0.75);
+  padding-top: 80px; /* Expanded vertical spacing for a luxury breathing grid */
+  overflow: hidden;
+}
+
+/* Subtle top gradient line to separate sections smoothly */
+.footer-top-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #9c1214, #e8c765, #4a0608);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1.1fr 1.1fr; /* Optimized column widths */
+  gap: 40px;
+  padding-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;   /* Safe side paddings */
+  padding-right: 24px;
+}
+
+/* --- Brand Info Configurations --- */
+.footer-brand strong {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.footer-brand span {
+  display: block;
+  color: var(--color-gold-light, #e8c765); /* High-contrast crisp accent color */
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.footer-brand p {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 280px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: var(--color-gold-light, #e8c765);
+  transform: translateY(-3px);
+}
+
+/* --- Navigation & Metadata Lists --- */
+.footer-col h5 {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  position: relative;
+}
+
+/* Elegant line marker under title headings */
+.footer-col h5::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-gold-light, #e8c765);
+  margin-top: 8px;
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col ul li {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.footer-col a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+/* Slide right dynamic link hover movement */
+.footer-col a:hover {
+  color: var(--color-gold-light, #e8c765);
+  transform: translateX(4px);
+}
+
+/* Text detailing layouts nested inside Service Times & Contact */
+.footer-col ul li strong {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer-col ul li span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 2px;
+}
+
+.footer-col ul li small {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gold-light, #e8c765);
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+/* --- Section Bottom Bar Grid --- */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 24px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-to-top {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+  color: var(--color-gold-light, #e8c765);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .site-footer {
+    padding-top: 60px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

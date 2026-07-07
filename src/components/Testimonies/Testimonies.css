@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Testimonies Section Styles
+   ========================================================================== */
+
+.testimonies {
+  background: #ffffff; /* Clean contrast breakdown right after the soft grey events row */
+  padding: 100px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonies-inner {
+  max-width: 850px; /* Bounded column grid widths for comfortable reading views */
+  margin: 0 auto;
+}
+
+.testimonies-header {
+  margin-bottom: 40px;
+}
+
+.testimonies-header .section-heading {
+  font-size: clamp(32px, 5vw, 44px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-black, #111);
+  margin-top: 10px;
+}
+
+/* --- Quote Layout Container --- */
+.testimony-display {
+  position: relative;
+  padding: 20px 0;
+}
+
+.testimony-quote-icon {
+  font-size: 90px;
+  font-family: serif;
+  line-height: 1;
+  color: rgba(156, 18, 20, 0.12); /* Faded red decorative background quote */
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+.testimony-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-red, rgba(156, 18, 20, 1));
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.testimony-quote {
+  font-size: clamp(16px, 2.5vw, 19px);
+  line-height: 1.65;
+  color: var(--color-text-muted, #555);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.testimony-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.testimony-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-black, #111);
+}
+
+.testimony-role {
+  font-size: 13px;
+  color: var(--color-text-muted, #777);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --- Navigation Controllers Structure --- */
+.testimonies-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 44px;
+}
+
+.testimony-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  color: var(--color-black, #111);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-bottom: 4px; /* Optical centering for arrow glyphs */
+  transition: all var(--transition, 0.3s ease);
+}
+
+.testimony-arrow:hover {
+  background: var(--color-red, rgba(156, 18, 20, 1));
+  border-color: var(--color-red, rgba(156, 18, 20, 1));
+  color: #ffffff;
+}
+
+.testimony-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.testimony-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition, 0.3s ease);
+}
+
+.testimony-dot.active {
+  background: var(--color-red, rgba(156, 18, 20, 1));
+  width: 22px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Responsive Layout Breakpoints
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .testimonies {
+    padding: 70px 16px;
+  }
+  
+  .testimony-quote {
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonies {
+    padding: 50px 16px;
+  }
+  
+  .testimonies-controls {
+    gap: 16px;
+  }
+}

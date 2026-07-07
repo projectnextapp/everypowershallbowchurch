@@ -1,0 +1,214 @@
+/* ==========================================================================
+   Events Section Styles
+   ========================================================================== */
+
+.events {
+  background: var(--color-bg-soft);
+  /* 
+     FIXED: 100px top/bottom padding for clean section spacing.
+     FIXED: 24px left/right padding to keep text cards safe from mobile screen edges.
+  */
+  padding: 100px 24px; 
+}
+
+.events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px; /* Increased separation bound gap spacing */
+}
+
+/* --- Action Button --- */
+.btn-outline-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-red);
+  border: 1.5px solid var(--color-red);
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.btn-outline-red:hover {
+  background: var(--color-red);
+  color: #fff;
+  transform: scale(1.03); /* Tiny button reactive scale pop */
+}
+
+/* --- Card Grid Architecture --- */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px; /* Increased framework gap slightly for modern layout breathing room */
+  max-width: 1200px; /* Keeps the content bounded on ultra-wide screens */
+  margin: 0 auto;    /* Centers the grid inside the section container wrapper */
+}
+
+.event-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  /* Custom overshooting bezier curve for smooth card lift movements */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+/* Card reactive elevation bounce pop */
+.event-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* --- FIXED: Parallax Container & Motion Engine --- */
+.event-image-container {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden; /* Clips layout frames cleanly */
+}
+
+.event-parallax-bg {
+  width: 100%;
+  height: 130%; /* Extra height allows image travel room inside the frame */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Internal image dynamic motion zoom during parent frame hover state triggers */
+.event-card:hover .event-parallax-bg {
+  transform: scale(1.08) translateY(-5%);
+}
+
+/* --- Card Body Typography Layout --- */
+.event-body {
+  padding: 26px; /* Expanded content text margins */
+}
+
+.event-date {
+  color: var(--color-red);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.event-body h4 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--color-black, #111);
+}
+
+.event-text {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.event-link {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-black);
+  text-decoration: none;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.event-link:hover {
+  color: var(--color-red);
+  transform: translateX(4px); /* Interactive anchor shift movement */
+}
+
+/* --- FIXED: Spring Loaded Bounce Text Entry Motions --- */
+.bounce-item {
+  opacity: 0;
+  /* Uses an overshooting curve to mimic bouncy spring mechanics */
+  animation: springBounceIn 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Content entry sequence delay states */
+.bounce-item.delay-1 { animation-delay: 0.15s; }
+.bounce-item.delay-2 { animation-delay: 0.3s; }
+.bounce-item.delay-3 { animation-delay: 0.45s; }
+
+@keyframes springBounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(45px) scale(0.92);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translateY(-5px) scale(1.02); /* Overshoots targets slightly upward */
+  }
+  80% {
+    transform: translateY(2px) scale(0.99); /* Settles slightly downward */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Locks exactly clean */
+  }
+}
+
+/* ==========================================================================
+   Responsive Layout Breakpoints
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .events {
+    padding: 70px 16px; /* Slightly tighter gutters on tablets */
+  }
+  
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .events {
+    padding: 50px 16px; /* Comfortable padding rules for mobile */
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .events-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    margin-bottom: 34px;
+  }
+
+  .events-header .btn-outline-red {
+    text-align: center;
+    width: 100%; /* Spans full horizontal bounds on small viewports */
+  }
+}
+
+/* Accessibility settings for users who prefer disabled animations */
+@media (prefers-reduced-motion: reduce) {
+  .bounce-item {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .event-card:hover, .event-parallax-bg {
+    transform: none !important;
+  }
+}

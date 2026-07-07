@@ -1,0 +1,19 @@
+:root {
+  --color-red: #7a0c0e;
+  --color-red-dark: #5a0709;
+  --color-red-light: #9c1214;
+  --color-gold: #d4af37;
+  --color-gold-light: #e6c866;
+  --color-black: #1a1210;
+  --color-text-muted: #6b6360;
+  --color-bg-soft: #faf6ee;
+  --color-border: #eee3d0;
+
+  --font-display: 'Anton', 'Arial Black', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --container-width: 1240px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --transition: 0.25s ease;
+}
