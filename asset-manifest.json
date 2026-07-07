@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/everypowershallbowchurch/static/css/main.604a7c3b.css",
+    "main.js": "/everypowershallbowchurch/static/js/main.ec08da59.js",
+    "static/js/453.1b11ab66.chunk.js": "/everypowershallbowchurch/static/js/453.1b11ab66.chunk.js",
+    "static/media/epsbPrayer.jpg": "/everypowershallbowchurch/static/media/epsbPrayer.959512e317e99260bbd4.jpg",
+    "static/media/epsbtestimony.jpg": "/everypowershallbowchurch/static/media/epsbtestimony.0ea23f6886ff533fbf7d.jpg",
+    "static/media/mk.jpg": "/everypowershallbowchurch/static/media/mk.1950628bf696283df0cd.jpg",
+    "static/media/epsb1.jpg": "/everypowershallbowchurch/static/media/epsb1.03017d620e9c31839630.jpg",
+    "static/media/bs.jpg": "/everypowershallbowchurch/static/media/bs.473a5c84d0d5142a0c75.jpg",
+    "static/media/ss.jpg": "/everypowershallbowchurch/static/media/ss.5ca17f582b1c29b2fdef.jpg",
+    "static/media/epsbLogo.png": "/everypowershallbowchurch/static/media/epsbLogo.92fd060e45007d075b3a.png",
+    "index.html": "/everypowershallbowchurch/index.html",
+    "main.604a7c3b.css.map": "/everypowershallbowchurch/static/css/main.604a7c3b.css.map",
+    "main.ec08da59.js.map": "/everypowershallbowchurch/static/js/main.ec08da59.js.map",
+    "453.1b11ab66.chunk.js.map": "/everypowershallbowchurch/static/js/453.1b11ab66.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.604a7c3b.css",
+    "static/js/main.ec08da59.js"
+  ]
+}
