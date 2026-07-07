@@ -40,13 +40,14 @@ function AboutCarousel() {
         />
       ))}
 
-      <button className="carousel-arrow carousel-arrow-left" onClick={prev} aria-label="Previous image">‹</button>
-      <button className="carousel-arrow carousel-arrow-right" onClick={next} aria-label="Next image">›</button>
+      <button type="button" className="carousel-arrow carousel-arrow-left" onClick={prev} aria-label="Previous image">‹</button>
+      <button type="button" className="carousel-arrow carousel-arrow-right" onClick={next} aria-label="Next image">›</button>
 
       <div className="carousel-dots">
         {ABOUT_IMAGES.map((src, i) => (
           <button
             key={src}
+            type="button"
             className={i === index ? 'active' : ''}
             aria-label={`Go to image ${i + 1}`}
             onClick={() => setIndex(i)}
@@ -99,7 +100,8 @@ export default function About() {
                 className={`reveal reveal-up ${copyVisible ? 'is-visible' : ''}`}
                 style={{ transitionDelay: copyVisible ? `${0.15 + i * 0.12}s` : '0s' }}
               >
-                <span className="pillar-dot" aria-hidden="true" />
+                {/* FIXED: Placed index counter digit directly inside the shield for an elegant look */}
+                <span className="pillar-dot" aria-hidden="true">{i + 1}</span>
                 <div>
                   <h4>{p.title}</h4>
                   <p>{p.text}</p>

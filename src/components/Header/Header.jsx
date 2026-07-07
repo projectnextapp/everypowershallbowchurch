@@ -9,10 +9,7 @@ const NAV_LINKS = [
   { label: 'Testimonies', href: '#testimonies' },
 ];
 
-// Temporary placeholder logo — swap for the church's real logo image when ready.
-// const LOGO_URL = 'https://placehold.co/80x80/1a1210/e8c765?text=EPSB&font=montserrat';
 const LOGO_URL = logo;
-
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -80,6 +77,7 @@ export default function Header() {
         )}
 
         <button
+          type="button"
           className={`menu-toggle ${menuOpen ? 'is-active' : ''}`}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
