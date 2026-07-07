@@ -11,6 +11,7 @@
   padding: 100px 24px; 
   position: relative;
   z-index: 5; /* Layered safely over the hero transition elements */
+  overflow: hidden !important;
 }
 
 .about-inner {
