@@ -59,7 +59,7 @@ export default function Footer() {
             </li>
             <li>
               <small>Location</small>
-              <span>12 Sabituyi CLose, Off Akunne Street, Oluti, Lagos</span>
+              <span>13b Sabituyi CLose, Off Akunne Street, Oluti, Lagos</span>
             </li>
           </ul>
         </div>
